@@ -12,6 +12,5 @@ public class SoapString{
         String word = entrada.next();
         String message = port.getLetters(word);
         System.out.println("Palabra sin vocales: "+message);
-
     }
 }
