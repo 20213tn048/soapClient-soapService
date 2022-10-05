@@ -29,7 +29,7 @@
                 </executions>
                 <configuration>
                     <wsdlUrls>
-                        <wsdlUrl>http://localhost:8080/Service?wsdl</wsdlUrl>
+                        <wsdlUrl>http://localhost:8081/Service?wsdl</wsdlUrl>
                     </wsdlUrls>
                 </configuration>
             </plugin>

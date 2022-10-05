@@ -22,9 +22,9 @@ public class Service {
     @WebMethod(operationName = "getLetters")
     public String responseMessage(@WebParam(name = "message")String word){
         if(word == null){
-            return "Ingresa una palabra para continuar";
+            return "No se encontró una palabra. Intentelo nuevamente";
         }else{
-            return  word.replaceAll("aeiou",word);
+            return  word.replaceAll("[aAeEiIoOuU]","");
         }
     }
 
@@ -51,7 +51,7 @@ public class Service {
     }
     public static void main(String[] args) {
         System.out.println("Starting server...");
-        Endpoint.publish("http://localhost:8080/Service", new Service());
+        Endpoint.publish("http://localhost:8081/Service", new Service());
         System.out.println("Waiting for requests...");
     }
 }

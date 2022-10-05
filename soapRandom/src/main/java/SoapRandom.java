@@ -7,7 +7,8 @@ public class SoapRandom {
     public static void main(String[] args) {
         ServiceService service = new ServiceService();
         Service port = service.getServicePort();
-        System.out.println("Escriba el número que creé que se generó aleatoriamente");
+        System.out.println("Escriba el número que creé que se generó aleatoriamente\n" +
+                "Rango de números: 0-3");
         Integer num = entrada.nextInt();
         String message = port.aleatoryNumber(num);
             System.out.println(message);
